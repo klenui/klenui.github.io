@@ -1,7 +1,7 @@
 [editor on GitHub](https://github.com/klenui/klenui.github.io/edit/master/index.md)
 
 # IDF
- - [IDF cmake 분석](https://klenui.github.io/IDF.md)
+ - [IDF cmake 분석](https://klenui.github.io/IDF)
 
 # CMake
 
