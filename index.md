@@ -4,7 +4,7 @@
  - [IDF cmake 분석](https://klenui.github.io/IDF)
 
 # CMake
-  https://klenui.github.io/Cmake
+ - [CMake 간단 설명](https://klenui.github.io/CMake)
   
 # Cuda
  - [간단한 쿠다 설명](https://klenui.github.io/Cuda)
