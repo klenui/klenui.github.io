@@ -26,15 +26,26 @@ main이 아닌 다른 폴더를 추가하고 싶을 때는 EXTRA_COMPONENT_DIRS 
 
 [Renaming main component](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#rename-main)
 
+IDF 프로젝트를 만들기 위해서는 다음과 같은 과정이 필요합니다.
+
+1. IDF_PATH/tools/cmake/project.cmake 를  include하는 CMakeLists.txt를 만듭니다.
+1. 서브 디렉토리 main을 만듭니다.
+1. main 폴더에 idf_component_register를 포함하는 CMakeLists.txt를 만듭니다.
+1. idf.py build 명령으로 빌드합니다.
+
 # IDF Component
 
 Component는 각 폴더에 idf_component_register를 포함하는 CMakeLists.txt를 포함하고 있어야 합니다.
+idf_component_register 함수를 통해 소스와 헤더 파일을 포함 할 수 있습니다. 또는 다른 component에 대한 의존성을 기술할 수 있습니다.
+외부에서 빌드 된 library를 component화 할때는 add_prebuilt_library로 등록하고 target_link_libraries로 component와 link하도록 합니다.
 
 # CMake 사용
-
 [ESPRESSIF DOC](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#using-esp-idf-in-custom-cmake-projects)
 
-idf project.make를 사용하지 않고, 일반 cmake에서 IDF build를 가져다 사용하는 방법입니다.
+외부 cmake에서 idf 결과물을 사용하기 위해서는 idf_build_process를 cmake 스크립트에 추가해 주면 됩니다.
+
+
+
 
 
 
